@@ -17,15 +17,7 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-[//]: # (Image References)
 
-[image2]: Output_Images/download (1).png "Undistorted"
-[image3]: output_images/download (6).png "Combined Threshold"
-[image4]: output_images/download (8).png "Distorsion Transform"
-[image5]: output_images/download (12).png "Distorsion Transform Binary"
-[image6]: output_images/download (9).png "Histogram"
-[image7]: output_images/download (10).png "Poly 1"
-[image8]: output_images/download (11).png "Final"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/1966/view) Points
 
@@ -55,7 +47,7 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 #### 1. Provide an example of a distortion-corrected image.
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image2]
+![alt text][https://github.com/SrinivasSangamalla/AdvancedLaneFinding/blob/main/Output_Images/download%20(1).png]
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
@@ -63,7 +55,7 @@ I used a combination of gradient thresholds to generate a binary image (threshol
 I first used the Abstract Sobel Operator Threshold, then Magnitude Threshold then Direction Threshold.
 Finally, I combined them all into a Combined Threshold Binary Image.
 
-![alt text][image3.png]
+![alt text][https://github.com/SrinivasSangamalla/AdvancedLaneFinding/blob/main/Output_Images/download%20(6).png]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -94,11 +86,11 @@ This resulted in the following source and destination points:
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![alt text][image4]
+![alt text][https://github.com/SrinivasSangamalla/AdvancedLaneFinding/blob/main/Output_Images/download%20(8).png]
 
 I then verified the perspective transform on the binary image as well.
 
-![alt text][image5.png]
+![alt text][https://github.com/SrinivasSangamalla/AdvancedLaneFinding/blob/main/Output_Images/download%20(12).png]
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
@@ -106,11 +98,11 @@ The code for the 2nd order polynomial fitting is in cells 13-18 in the notebook.
 
 First, I took the histogram:
 
-![alt text][image6]
+![alt text][https://github.com/SrinivasSangamalla/AdvancedLaneFinding/blob/main/Output_Images/download%20(9).png]
 
 Here are the results:
 
-![alt text][image7]
+![alt text][https://github.com/SrinivasSangamalla/AdvancedLaneFinding/blob/main/Output_Images/download%20(10).png]
 
 
 
@@ -123,7 +115,7 @@ refer to cell 29
 I implemented this in the last cell. The function is also used to create the video.
 Here is an example of my result on a test image:
 
-![alt text][image8]
+![alt text][https://github.com/SrinivasSangamalla/AdvancedLaneFinding/blob/main/Output_Images/download%20(11).png]
 
 ---
 
